@@ -15,7 +15,7 @@ object Boot extends App {
   println("Enter the Column start position in the Board")
   val y = scanner.nextInt()
 
-  val tour = PawnTour.start((x, y), new Board(boardSize), 1)
+  val tour = PawnTour.find((x, y), Board(boardSize), 1)
 
   println(s"Here is the Pawn Tour for a board size of $boardSize and position $x,$y")
   for (i <- tour.indices) {
